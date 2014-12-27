@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Include CSS Library Files-->
+    <link type="text/css" rel="stylesheet" href="bower_components/components-bootstrap/css/bootstrap.css"/>
+
+    <!--Include Dependencies here-->
+    <link type="text/css" rel="stylesheet/less" href="styles/colors.less"/>
+    <link type="text/css" rel="stylesheet/less" href="styles/mixins.less"/>
+
+    <!--Include Component Styles here-->
+    <link type="text/css" rel="stylesheet/less" href="styles/page.less"/>
+    <link type="text/css" rel="stylesheet/less" href="styles/header.less"/>
+    <link type="text/css" rel="stylesheet/less" href="styles/footer.less"/>
+    <link type="text/css" rel="stylesheet/less" href="styles/stage.less"/>
+    <link type="text/css" rel="stylesheet/less" href="styles/contact-form.less"/>
+    <link type="text/css" rel="stylesheet/less" href="styles/social-connections.less"/>
+
+    <script type="text/javascript" src="styles/less.js"></script>
+
+</head>
+<body>
+<div class="container-fluid">
+
+    <!-- Header Area -->
+    <header class="main-nav">
+        <div class="row">
+            <div class="col-md-4">
+                Logo
+            </div>
+            <div class="col-md-8">
+                <ul class="nav-row">
+                    <li class="nav-item">Home</li>
+                    <li class="nav-item">Who We Are</li>
+                    <li class="nav-item">News</li>
+                    <li class="nav-item">Contacts</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stage Area -->
+    <section class="stage">
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <p class="title"><span class="highlight"> Feel free</span> to contact us anytime</p>
+            <p class="subtitle">Use the form or email us directly - <a href="mailto:rahulmeghlan@gmail.com"> info@balticmanager.com</a></p>
+            <form class="form row">
+                <div class="col-md-4">
+                    <input type="text" name="co-name" placeholder="Name/Company name"/>
+                    <input type="text" name="email" placeholder="your email"/>
+                    <input type="text" name="phone" placeholder="your phone number"/>
+                </div>
+                <div class="col-md-8">
+                    <textarea name="message" placeholder="Message..."></textarea>
+                </div>
+                <input type="submit" class="btn btn-default submit" value="Mail it">
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- Social Connections Area-->
+    <section class="social-connections row">
+         <div class="col-md-4 social-connection-item">
+             <p class="username">Our username on skype</p>
+             <p class="title">Balticmanager</p>
+         </div>
+         <div class="col-md-4 social-connection-item">
+             <p class="username">Our username on facebook</p>
+             <p class="title">Balticmanager</p>
+         </div>
+         <div class="col-md-4 social-connection-item phone">
+             <p class="username">Let's talk everything over the phone</p>
+             <p class="title phone">+371 26858447</p>
+         </div>
+    </section>
+
+
+    <!-- Footer Area -->
+    <footer class="footer">
+        <p>All rights reserved 2014 - <a href="#">Balticmanager.com</a></p>
+    </footer>
+</div>
+</body>
+</html>
