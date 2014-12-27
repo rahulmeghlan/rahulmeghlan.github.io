@@ -1,23 +1,7 @@
 @import "import.less";
 
 .contact-form {
-  background: @color-grey;
-  padding: 20px 35px;
-  position: relative;
-  min-height: 0;
-  .title, .subtitle {
-    text-align: center;
-    font-style: italic;
-  }
-  .title {
-    font-size: 20px;
-  }
-  .subtitle {
-    font-size: 16px;
-  }
-  .highlight {
-    color: @color-yellow;
-  }
+  .stage-content();
   .form {
     margin: 0;
     input, textarea {
@@ -33,12 +17,6 @@
       height: 135px;
     }
     .submit {
-      border-bottom: 5px solid @color-yellow;
-      padding: 5px 20px;
-      border-radius: 0;
-      background: @color-white;
-      color: @color-black;
-      font-size: 22px;
       position: absolute;
       bottom: -40px;
       right: 5%;

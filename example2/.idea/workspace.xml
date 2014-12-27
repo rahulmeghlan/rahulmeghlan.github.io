@@ -4,19 +4,22 @@
     <list default="true" id="6e9eda50-b2a9-42cd-93af-6146a92db11e" name="Default" comment="" />
     <ignored path="example2.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419701856331" ignored="false" />
-    <file path="/page.less" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419697941708" ignored="false" />
+    <file path="/index.html" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419705032042" ignored="false" />
+    <file path="/page.less" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419705277053" ignored="false" />
     <file path="/header.less" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419701809514" ignored="false" />
-    <file path="/colors.less" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419692199833" ignored="false" />
-    <file path="/mixins.less" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419689199356" ignored="false" />
-    <file path="/stage.less" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419692732026" ignored="false" />
+    <file path="/colors.less" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419704319138" ignored="false" />
+    <file path="/mixins.less" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419703145014" ignored="false" />
+    <file path="/stage.less" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419703476835" ignored="false" />
     <file path="/footer.less" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419692409035" ignored="false" />
-    <file path="/contact-form.less" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419699218269" ignored="false" />
+    <file path="/contact-form.less" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419703154798" ignored="false" />
     <file path="/social-connections.less" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419700616099" ignored="false" />
     <file path="/.gitignore" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419700392118" ignored="false" />
     <file path="/contact.html" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419701879637" ignored="false" />
     <file path="/about.html" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419701886668" ignored="false" />
     <file path="/news.html" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419701871947" ignored="false" />
+    <file path="/a.dummy" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419702977552" ignored="false" />
+    <file path="/promotion.less" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419703999027" ignored="false" />
+    <file path="/content-nav.less" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419705173423" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,49 +39,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="header.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/styles/header.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="22" selection-start="868" selection-end="868" vertical-scroll-proportion="-17.36">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="67" selection-start="1393" selection-end="1393" vertical-scroll-proportion="-2.9615386">
+            <state line="18" column="77" selection-start="891" selection-end="891" vertical-scroll-proportion="7.8461537">
               <folding>
                 <element signature="tag#section#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#section#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#section#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#1;tag#section#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#section#3;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#section#4;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contact.html">
+      <file leaf-file-name="page.less" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/styles/page.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="60" selection-start="1386" selection-end="1386" vertical-scroll-proportion="-3.2692308">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="about.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/about.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="60" selection-start="1386" selection-end="1386" vertical-scroll-proportion="0.48054475">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="news.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/news.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="60" selection-start="1386" selection-end="1386" vertical-scroll-proportion="-15.730769">
+            <state line="31" column="19" selection-start="446" selection-end="446" vertical-scroll-proportion="0.7253788">
               <folding />
             </state>
           </provider>
@@ -95,19 +74,21 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/styles/import.less" />
-        <option value="$PROJECT_DIR$/styles/mixins.less" />
-        <option value="$PROJECT_DIR$/styles/colors.less" />
         <option value="$PROJECT_DIR$/styles/footer.less" />
-        <option value="$PROJECT_DIR$/styles/stage.less" />
-        <option value="$PROJECT_DIR$/styles/page.less" />
-        <option value="$PROJECT_DIR$/styles/contact-form.less" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/styles/social-connections.less" />
         <option value="$PROJECT_DIR$/styles/header.less" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/news.html" />
-        <option value="$PROJECT_DIR$/contact.html" />
         <option value="$PROJECT_DIR$/about.html" />
+        <option value="$PROJECT_DIR$/styles/mixins.less" />
+        <option value="$PROJECT_DIR$/styles/contact-form.less" />
+        <option value="$PROJECT_DIR$/contact.html" />
+        <option value="$PROJECT_DIR$/styles/stage.less" />
+        <option value="$PROJECT_DIR$/styles/promotion.less" />
+        <option value="$PROJECT_DIR$/styles/colors.less" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/styles/content-nav.less" />
+        <option value="$PROJECT_DIR$/styles/page.less" />
       </list>
     </option>
   </component>
@@ -162,12 +143,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/styles" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
@@ -287,58 +283,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/import.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="22" selection-start="45" selection-end="45" vertical-scroll-proportion="0.03219697">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/mixins.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/colors.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="29" selection-start="119" selection-end="119" vertical-scroll-proportion="-3.4">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/footer.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="20" selection-start="102" selection-end="102" vertical-scroll-proportion="-3.4">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/stage.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="28" selection-start="114" selection-end="114" vertical-scroll-proportion="0.19318181">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/page.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="25" selection-start="187" selection-end="187" vertical-scroll-proportion="0.38636363">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/contact-form.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="15" selection-start="126" selection-end="126" vertical-scroll-proportion="0.19318181">
           <folding />
         </state>
       </provider>
@@ -371,26 +318,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="67" selection-start="1393" selection-end="1393" vertical-scroll-proportion="-2.9615386">
-          <folding>
-            <element signature="tag#section#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#section#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-          </folding>
+        <state line="35" column="60" selection-start="1386" selection-end="1386" vertical-scroll-proportion="-9.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/msg-area.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="60" selection-start="1386" selection-end="1386" vertical-scroll-proportion="-3.2692308">
+        <state line="49" column="34" selection-start="1871" selection-end="1871" vertical-scroll-proportion="-3.9230769">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/about.html">
+    <entry file="file://$PROJECT_DIR$/styles/mixins.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="60" selection-start="1386" selection-end="1386" vertical-scroll-proportion="0.48054475">
+        <state line="11" column="16" selection-start="205" selection-end="205" vertical-scroll-proportion="-7.48">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/stage.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="19" selection-start="619" selection-end="619" vertical-scroll-proportion="-10.08">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/colors.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="277" selection-end="277" vertical-scroll-proportion="-6.8">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/promotion.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="21" selection-start="273" selection-end="273" vertical-scroll-proportion="-8.36">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/contact-form.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="19" selection-start="59" selection-end="59" vertical-scroll-proportion="-2.04">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/content-nav.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="17" selection-start="414" selection-end="414" vertical-scroll-proportion="0.6761364">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="77" selection-start="891" selection-end="891" vertical-scroll-proportion="7.8461537">
+          <folding>
+            <element signature="tag#section#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#section#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#section#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#section#3;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#section#4;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/page.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="19" selection-start="446" selection-end="446" vertical-scroll-proportion="0.7253788">
           <folding />
         </state>
       </provider>

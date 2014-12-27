@@ -9,10 +9,28 @@
     color: @color-white;
   }
 
-  a{
+  .row {
+    margin: 0;
+  }
+
+  a {
     color: @color-yellow;
   }
 
   div {
     .min-height();
+  }
+
+  .content {
+    .global-padding();
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+    &:nth-child(even) {
+      background: @color-white1;
+    }
+    &:nth-child(odd) {
+      background: @color-white;
+    }
+    color: @color-black1;
   }
