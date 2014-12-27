@@ -6,8 +6,7 @@
 
   .main-nav {
     min-height: 80px;
-    background-color: @color-black;
-    opacity: 0.7;
+    background-color: rgba(0, 0, 0, 1);
     position: absolute;
     top: 0;
     width: 100%;
@@ -24,15 +23,23 @@
       list-style: none;
       color: @color-white;
       text-transform: uppercase;
-      margin-right: 25px;
-      padding: 25px 0;
+      margin-right: 5px;
+      padding: 25px 10px;
       float: left;
-      &:hover{
+      &:hover, &.active{
         cursor: pointer;
         color: @color-white;
        .min-height();
-        opacity: 1;
         border-bottom: 5px solid @color-yellow;
+        background: @color-grey;
+        a{
+          color: @color-white;
+          text-decoration: none;
+        }
+      }
+      a{
+        color: @color-white;
+        display: block;
       }
     }
   }
