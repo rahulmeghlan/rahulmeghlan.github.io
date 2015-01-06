@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KENJI ENDO</title>
+    <link rel="shortcut icon" href="http://kenjiendo.com/wp/wp-content/themes/kenjiendo_v1/common/img/favicon.ico"
+          type="image/x-icon">
+
+    <!-- Common Files -->
+    <link rel="stylesheet/less" type="text/css" href="styles/common/colors.less"/>
+    <link rel="stylesheet/less" type="text/css" href="styles/common/elements.less"/>
+
+    <!-- Component Specific files included here -->
+    <link rel="stylesheet/less" type="text/css" href="styles/components/page.less"/>
+    <link rel="stylesheet/less" type="text/css" href="styles/components/audio.less"/>
+    <link rel="stylesheet/less" type="text/css" href="styles/components/preloader.less"/>
+
+    <!-- Less Runtime Compiler -->
+    <script type="text/javascript" src="libs/less.min.js"></script>
+</head>
+<body>
+
+<!-- Audio Section -->
+<!--<audio id="sound" preload="auto" controls="1" loop="1" autoplay>-->
+    <!--<source src="http://kenjiendo.com/wp/wp-content/uploads/2014/09/002.mp3?1420552701" type="audio/mp3">-->
+<!--</audio>-->
+
+<div class="circle_control_side">
+    <div class="inner">
+        <div class="circle_control_play">
+            <svg width="17.337px" height="20px">
+                <polygon points="0.5,0.866 16.336,9.999 0.5,19.133 "></polygon>
+            </svg>
+        </div>
+        <div class="circle_control_pause cf">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+
+<div class="preloadbar"></div>
+
+<!-- Library Files -->
+<script type="text/javascript" src="libs/jquery.min.js"></script>
+
+<!-- App Specific Files -->
+<script type="text/javascript" src="js/namespace-init.js"></script>
+
+<!-- Component Specific Files-->
+<script type="text/javascript" src="js/components/audio.js"></script>
+<script type="text/javascript" src="js/components/preloader.js"></script>
+
+<!-- Initialize all the components-->
+<script type="text/javascript" src="js/page-init.js"></script>
+</body>
+</html>
