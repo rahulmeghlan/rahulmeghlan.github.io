@@ -6,10 +6,20 @@
    * To change this template use File | Settings | File Templates.
    */
 
-  .transition() {
-    transition: all .3s;
+  .transition(@config: all .3s) {
+    transition: @config;
+    -webkit-transition: @config;
   }
 
   .transition-delay(@time: 0.4s) {
     transition-delay: @time;
+  }
+
+  .transform-scale(@scale: 1.35) {
+    transform: scale(@scale);
+    -webkit-transform: scale(@scale);
+  }
+
+  .transform-translate3D(@x, @y, @z) {
+    transform: translate3d(@x, @y, @z);
   }
