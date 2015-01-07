@@ -11,6 +11,10 @@
     }
 
     console.log(namespace);
-    preload();
+    $.each(namespace, function (key, value) {
+        console.log("Comp " + key + " initialized !");
+        value.init();
+    })
+//    preload();
 
 })(typeof jQuery !== "undefined" ? jQuery : null, app);
