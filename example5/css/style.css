@@ -149,7 +149,30 @@ h2.resp-tab-active {
 
 .resp-easy-accordion h2.resp-accordion {
     display: block;
+    position: relative;
 }
+
+.resp-easy-accordion .resp-tab-content{
+    border:0;
+}
+
+.resp-easy-accordion .resp-tab-content p{
+    margin: 10px 0;
+}
+
+/*
+.resp-accordion::after{
+    content: "+";
+    float: right;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: -5px;
+}
+
+.resp-accordion.resp-tab-active::after{
+    content: "-";
+}
+*/
 
 .resp-jfit {
     width: 100%;

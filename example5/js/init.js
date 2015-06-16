@@ -2,7 +2,7 @@
     $(document).ready(function () {
         //Initialise the plugin on document-ready
         $('#tabs').easyResponsiveTabs({
-            type: 'vertical', //Types: default, vertical, accordion
+            type: 'accordion', //Types: default, vertical, accordion
             activetab_bg: '#fedb00', // Active-BG-Color
             inactive_bg: '#fff', // Inactive-BG-Color
             width: 'auto', //auto or any width like 600px
