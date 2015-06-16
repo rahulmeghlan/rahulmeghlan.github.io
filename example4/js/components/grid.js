@@ -36,4 +36,4 @@
 
     namespace.grid = gridNS;
 
-})(app)
+})(app);

@@ -13,7 +13,7 @@
     <file path="/footer.less" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419692409035" ignored="false" />
     <file path="/contact-form.less" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419703154798" ignored="false" />
     <file path="/social-connections.less" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419700616099" ignored="false" />
-    <file path="/.gitignore" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419700392118" ignored="false" />
+    <file path="/.gitignore" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419705830656" ignored="false" />
     <file path="/contact.html" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419701879637" ignored="false" />
     <file path="/about.html" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419701886668" ignored="false" />
     <file path="/news.html" changelist="6e9eda50-b2a9-42cd-93af-6146a92db11e" time="1419701871947" ignored="false" />
@@ -90,10 +90,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact-form.less" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="contact-form.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/contact-form.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="432" selection-end="432" vertical-scroll-proportion="0.7083333">
+            <state line="4" column="13" selection-start="69" selection-end="69" vertical-scroll-proportion="-2.72">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="6" selection-start="20" selection-end="20" vertical-scroll-proportion="0.03074141">
               <folding />
             </state>
           </provider>
@@ -111,7 +120,6 @@
       <list>
         <option value="$PROJECT_DIR$/styles/import.less" />
         <option value="$PROJECT_DIR$/styles/footer.less" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/styles/social-connections.less" />
         <option value="$PROJECT_DIR$/styles/header.less" />
         <option value="$PROJECT_DIR$/news.html" />
@@ -125,6 +133,7 @@
         <option value="$PROJECT_DIR$/styles/page.less" />
         <option value="$PROJECT_DIR$/styles/stage.less" />
         <option value="$PROJECT_DIR$/styles/contact-form.less" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -326,13 +335,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="18" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/social-connections.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="24" selection-start="458" selection-end="458" vertical-scroll-proportion="-14.96">
@@ -434,7 +436,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/contact-form.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="432" selection-end="432" vertical-scroll-proportion="0.7083333">
+        <state line="4" column="13" selection-start="69" selection-end="69" vertical-scroll-proportion="-2.72">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="6" selection-start="20" selection-end="20" vertical-scroll-proportion="0.03074141">
           <folding />
         </state>
       </provider>
