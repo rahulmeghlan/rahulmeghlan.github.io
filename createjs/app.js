@@ -4,7 +4,7 @@
 (function () {
     var stage,
         items = {},
-        lastPos = 160;
+        lastPos = 10;
 
     function init() {
         createStage();
