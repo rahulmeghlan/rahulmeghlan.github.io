@@ -1,0 +1,31 @@
+<html>
+<head>
+    <script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+    <!--<script>
+        function init() {
+            var stage = new createjs.Stage("demoCanvas");
+            var circle = new createjs.Shape();
+            circle.graphics.beginFill("DeepSkyBlue").drawCircle(0, 0, 50);
+            circle.x = 100;
+            circle.y = 100;
+            stage.addChild(circle);
+            stage.update();
+
+            //Update stage will render next frame
+            createjs.Ticker.addEventListener("tick", handleTick);
+
+            function handleTick() {
+                //Circle will move 10 units to the right.
+                circle.x += 10;
+                //Will cause the circle to wrap back
+                if (circle.x > stage.canvas.width) { circle.x = 0; }
+                stage.update();
+            }
+        }
+    </script>-->
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body onload="myApp.init();">
+<canvas id="demoCanvas" width="1032" height="400"></canvas>
+</body>
+</html>
