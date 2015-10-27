@@ -17,11 +17,19 @@
     }
 
     function updateStage(item, i) {
+        var isPressedUp = false;
         lastPos += lastPos;
         item.addEventListener("pressmove", function (e) {
-            e.target.x = e.stageX;
-            e.target.y = e.stageY;
+            console.log("b");
+            e.target.x = e.stageX - 97;
+            e.target.y = e.stageY - 97;
             stage.update();
+        });
+        item.addEventListener("pressup", function (e) {
+            console.log(e.target.y + " : " + e.stageY);
+//            e.target.x = e.stageX;
+//            e.target.y = e.stageY;
+//            stage.update();
         });
         item.x = lastPos;
 //        item.y = (10 * i);
@@ -41,12 +49,12 @@
      }*/
 
     function loadImage(i) {
-        items["dragger"+i] =
-        items["name"+i] = new createjs.LoadQueue();
-        items["name"+i].addEventListener("fileload", function (e) {
+        items["dragger" + i] =
+            items["name" + i] = new createjs.LoadQueue();
+        items["name" + i].addEventListener("fileload", function (e) {
             updateStage(new createjs.Bitmap(e.result), i);
         });
-        items["name"+i].loadFile("images/flat-" + i + ".jpg");
+        items["name" + i].loadFile("images/flat-" + i + ".jpg");
     }
 
     function createStage() {
