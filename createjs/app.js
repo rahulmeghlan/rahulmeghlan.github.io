@@ -51,7 +51,7 @@
 
     function createStage() {
         stage = new createjs.Stage("demoCanvas");
-        window.stage = stage;
+        createjs.Touch.enable(stage);
     }
 
     function createShape() {
