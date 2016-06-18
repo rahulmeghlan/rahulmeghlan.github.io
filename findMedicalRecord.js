@@ -17,20 +17,33 @@
  * @description : Function returns total medical records passed either from
  * */
 var MedicalSystemRecords = (function () {
+    var totalRecords = 100000;
+
     // Create a Dummy Data Set which is sorted based on ssn
     function createDataSet() {
         var dataSet = [
             {ssn: 123456789, name: "rahul", medicalCondition: "fit"}
         ];
-        for (var i = 1; i < 1000000; i++) {
+        // Setting 1 million records in dataSet
+        for (var i = 1; i < totalRecords; i++) {
             dataSet.push({ssn: (dataSet[i - 1].ssn + 1), name: "rahul" + i, medicalCondition: (i % 2 === 0 ? "fit" : "not fit")});
+
+            if (i === totalRecords - 1) {
+                var $element = document.getElementsByClassName("loading-page")[0];
+                $element.style.height = 0;
+                $element.innerText = "Done.";
+                var timeout = setTimeout(function () {
+                    $element.style.display = "none";
+                    clearTimeout(timeout);
+                }, 1000);
+            }
         }
         return dataSet;
     }
 
     return {
         recordsInfo: createDataSet(),
-        totalRecords: createDataSet().length
+        totalRecords: totalRecords
     };
 })();
 
@@ -59,16 +72,20 @@ var Library = (function (medicalRecords) {
 var UserInterface = (function (lib, totalRecords) {
     function findMedicalRecord(e, ssn) {
         e.preventDefault();
-        setProgressBar(0);
         if (ssn < lib.get(0).ssn || ssn > lib.get(totalRecords - 1).ssn) {
-            alert("Please enter a valid SSN");
+            alert("Please enter a valid SSN . \n Starting from " + lib.get(0).ssn + " to " + lib.get(totalRecords - 1).ssn);
         } else {
             searchInRecords(ssn, 0, Math.floor(totalRecords / 2));
         }
     }
 
-    function searchInRecords(ssn, index1, index2) {        //Add a progress bar
-        setProgressBar(100 - (index2 - index1));
+    /**
+     * @name: searchInRecords
+     * @description: This is the internal function which recursively searches for medical records using Binary Search Algo
+     * @params: ssn, index1, index2
+     * */
+    function searchInRecords(ssn, index1, index2) {
+        setProgressBar(100 - (index2 - index1), "visible");
 
         if (index1 !== index2) {
             if (lib.contain(ssn, index1, index2)) {
@@ -77,24 +94,34 @@ var UserInterface = (function (lib, totalRecords) {
                 searchInRecords(ssn, index2 + 1, totalRecords - 1);
             }
         } else if (lib.contain(ssn, index1, index2)) {
-            console.log(lib.get(index1));
+            displayResult(lib.get(index1));
         } else {
             searchInRecords(ssn, index1 + 1, index2 + 1); // this is done, because we are doing Math.floor for index2
         }
     }
 
-    function setProgressBar(searchPercentage) {
-        document.getElementsByClassName("progress-bar")[0].style.width = searchPercentage + "%";
-        document.getElementsByClassName("progress-bar")[0].innerHTML = searchPercentage + "%";
+    function setProgressBar(searchPercentage, state) {
+        var $progressBar = document.getElementsByClassName("progress-bar")[0];
+        document.getElementById("search-bar").style.visibility = state;
+        $progressBar.style.width = searchPercentage + "%";
+        $progressBar.innerHTML = searchPercentage + "%";
+    }
+
+    function displayResult(obj) {
+        document.getElementsByClassName("result-table")[0].style.visibility = "visible";
+        document.getElementsByClassName("res-ssn")[0].innerText = obj.ssn;
+        document.getElementsByClassName("res-name")[0].innerText = obj.name;
+        document.getElementsByClassName("res-mc")[0].innerText = obj.medicalCondition;
     }
 
 
     return {
         findMedicalRecord: findMedicalRecord,
-        resetProgressBar: function () {
-            setProgressBar(0);
+        resetProgressBar: function (e) {
+            if (e.keyCode !== 13) {
+                setProgressBar(0, "hidden");
+            }
         }
     };
-})
-(Library, MedicalSystemRecords.totalRecords);
+})(Library, MedicalSystemRecords.totalRecords);
 

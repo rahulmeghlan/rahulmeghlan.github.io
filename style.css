@@ -1,0 +1,15 @@
+.progress-bar {
+    width: 0;
+}
+
+.loading-page {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition-duration: 1s;
+    color: #ffffff;
+    text-align: center;
+    min-height: 1000px;
+}
