@@ -17,13 +17,23 @@
                 <div class="col-lg-6">
                     <form class="input-group"
                           onsubmit="UserInterface.findMedicalRecord(event, parseInt(document.getElementsByName('ssn')[0].value))">
-                        <input type="text" class="form-control" name="ssn" placeholder="Please enter your SSN" value="123456789">
+                        <input type="text" class="form-control" name="ssn" placeholder="Please enter your SSN"
+                               value="123456789" onkeyup="UserInterface.resetProgressBar();">
                         <span class="input-group-btn"><input type="submit" class="btn btn-default"
                                                              value="Get Medical Record"/></span>
                     </form>
                     <!-- /input-group -->
                 </div>
                 <!-- /.col-lg-6 -->
+                <div class="col-lg-8">
+                    <p>Searching Medical Records</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuemin="0"
+                             aria-valuemax="100" style="width: 0%;">
+                            0%
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

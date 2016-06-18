@@ -22,7 +22,7 @@ var MedicalSystemRecords = (function () {
         var dataSet = [
             {ssn: 123456789, name: "rahul", medicalCondition: "fit"}
         ];
-        for (var i = 1; i < 100; i++) {
+        for (var i = 1; i < 1000000; i++) {
             dataSet.push({ssn: (dataSet[i - 1].ssn + 1), name: "rahul" + i, medicalCondition: (i % 2 === 0 ? "fit" : "not fit")});
         }
         return dataSet;
@@ -59,6 +59,7 @@ var Library = (function (medicalRecords) {
 var UserInterface = (function (lib, totalRecords) {
     function findMedicalRecord(e, ssn) {
         e.preventDefault();
+        setProgressBar(0);
         if (ssn < lib.get(0).ssn || ssn > lib.get(totalRecords - 1).ssn) {
             alert("Please enter a valid SSN");
         } else {
@@ -66,7 +67,9 @@ var UserInterface = (function (lib, totalRecords) {
         }
     }
 
-    function searchInRecords(ssn, index1, index2) {
+    function searchInRecords(ssn, index1, index2) {        //Add a progress bar
+        setProgressBar(100 - (index2 - index1));
+
         if (index1 !== index2) {
             if (lib.contain(ssn, index1, index2)) {
                 searchInRecords(ssn, index1, Math.floor((index1 + index2) / 2))
@@ -80,9 +83,17 @@ var UserInterface = (function (lib, totalRecords) {
         }
     }
 
+    function setProgressBar(searchPercentage) {
+        document.getElementsByClassName("progress-bar")[0].style.width = searchPercentage + "%";
+        document.getElementsByClassName("progress-bar")[0].innerHTML = searchPercentage + "%";
+    }
+
 
     return {
-        findMedicalRecord: findMedicalRecord
+        findMedicalRecord: findMedicalRecord,
+        resetProgressBar: function () {
+            setProgressBar(0);
+        }
     };
 })
 (Library, MedicalSystemRecords.totalRecords);
