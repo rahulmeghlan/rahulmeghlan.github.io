@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Medical Records</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Medical Record System</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-lg-6">
+                    <form class="input-group"
+                          onsubmit="UserInterface.findMedicalRecord(event, parseInt(document.getElementsByName('ssn')[0].value))">
+                        <input type="text" class="form-control" name="ssn" placeholder="Please enter your SSN" value="123456789">
+                        <span class="input-group-btn"><input type="submit" class="btn btn-default"
+                                                             value="Get Medical Record"/></span>
+                    </form>
+                    <!-- /input-group -->
+                </div>
+                <!-- /.col-lg-6 -->
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript" src="findMedicalRecord.js"></script>
+</body>
+</html>
