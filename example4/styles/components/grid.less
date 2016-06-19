@@ -1,0 +1,205 @@
+@import "../import.less";
+
+.toggle {
+  .transition-delay(0.3s);
+  .transition();
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  z-index: 1002;
+  left: 0;
+  top: 0;
+
+  .toggle_body {
+    margin: 38px;
+    width: 24px;
+    height: 24px;
+    position: relative;
+  }
+
+  .bars {
+    height: 4px;
+    width: 4px;
+    background: @color-white;
+    position: absolute;
+    &.bars_1, &.bars_2, &.bars_3, {
+      top: 0;
+    }
+    &.bars_4, &.bars_5, &.bars_6, {
+      top: 10px;
+    }
+    &.bars_7, &.bars_8, &.bars_9, {
+      top: 20px;
+    }
+    &.bars_1, &.bars_4, &.bars_7, {
+      left: 0;
+    }
+    &.bars_2, &.bars_5, &.bars_8, {
+      left: 10px;
+    }
+    &.bars_3, &.bars_6, &.bars_9, {
+      left: 20px;
+    }
+
+  }
+}
+
+  /*
+   Grid Panel
+  */
+@panel-config: transform .3s cubic-bezier(0.215,0.610,0.355,1.000) 0s,opacity .25s ease-in-out 0s,visibility .3s ease-in-out 0s;
+#panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1002;
+  visibility: visible;
+  opacity: 1;
+  box-sizing: border-box;
+  .transform-scale();
+  .transition(@panel-config);
+
+  ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 500px;
+    width: 500px;
+    z-index: 10002;
+
+    li {
+      display: block;
+      position: absolute;
+      width: 160px;
+      border: 1px solid rgba(220, 220, 220, 0.1);
+      &:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+      a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 34px;
+        height: 34px;
+        fill: none;
+        .transition(all .3s ease-in-out 0s);
+        path {
+          margin: 0 auto;
+          fill: #FFF;
+          stroke: #FFF;
+          stroke-width: 2px;
+          stroke-linecap: square;
+          stroke-dashoffset: 3000;
+          stroke-dasharray: 3000;
+          .transition(stroke-dashoffset .3s ease-in-out 0s);
+        }
+      }
+      &.panel-1 {
+        top: 0;
+        left: 0;
+        .transform-translate3D(-25%, -25%, 0);
+      }
+      &.panel-2 {
+        top: 0;
+        left: 50%;
+        .transform-translate3D(0, -25%, 0);
+      }
+      &.panel-3 {
+        top: 0;
+        right: 0;
+        .transform-translate3D(25%, -25%, 0);
+      }
+      &.panel-4 {
+        top: 50%;
+        left: 0;
+        margin-top: -80px;
+        .transform-translate3D(-25%, 0, 0);
+      }
+      &.panel-5 {
+        top: 50%;
+        left: 50%;
+        margin: -80px 0 0 -80px;
+      }
+      &.panel-6 {
+        top: 50%;
+        right: 0;
+        margin-top: -80px;
+        .transform-translate3D(25%, 0, 0);
+      }
+      &.panel-7 {
+        bottom: 0;
+        left: 0;
+        .transform-translate3D(-25%, 25%, 0);
+      }
+      &.panel-8 {
+        top: 0;
+        left: 0;
+        .transform-translate3D(-25%, -25%, 0);
+      }
+      &.panel-9 {
+        bottom: 0;
+        right: 0;
+        .transform-translate3D(25%, 25%, 0);
+      }
+    }
+  }
+  @front-config: transform .55s cubic-bezier(0.190,1.000,0.220,1.000) 0s,opacity .45s ease-in-out 0s;
+  .front {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    .transition(@front-config);
+  }
+  @back-config: transform .55s cubic-bezier(0.190,1.000,0.220,1.000) 0s,opacity .45s ease-in-out 0s;
+  .back {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    .transform-translate3D(0, 100%, 0);
+    .transition(@back-config);
+  }
+
+  #mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background: @color-black_v1;
+    z-index: 1001;
+    visibility: visible;
+    opacity: 0.85;
+    &:hover{
+      cursor: url(http://kenjiendo.com/wp/wp-content/themes/kenjiendo_v2/img/icon-close.png) 10 10, pointer;
+    }
+  }
+}

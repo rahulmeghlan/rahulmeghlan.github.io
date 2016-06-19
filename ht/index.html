@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Medical Records</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Medical Record System</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-lg-6">
+                    <form class="input-group"
+                          onsubmit="UserInterface.findMedicalRecord(event, parseInt(document.getElementsByName('ssn')[0].value))">
+                        <input type="text" class="form-control" name="ssn" placeholder="Please enter your SSN"
+                               value="123456789" onkeyup="UserInterface.resetProgressBar(event);">
+                        <span class="input-group-btn"><input type="submit" class="btn btn-default"
+                                                             value="Get Medical Record"/></span>
+                    </form>
+                </div>
+                <div class="col-lg-8">
+                    <p id="search-bar" style="visibility: hidden;">Searching Medical Records</p>
+
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar">
+                            0%
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 table-responsive result-table">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>SSN</th>
+                            <th>NAME</th>
+                            <th>Medical Condition</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="res-ssn"></td>
+                            <td class="res-name"></td>
+                            <td class="res-mc"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="loading-page">
+    <h3>Creating Data Set of 1 Lakh Records</h3>
+</div>
+<script type="text/javascript" src="findMedicalRecord.js"></script>
+</body>
+</html>

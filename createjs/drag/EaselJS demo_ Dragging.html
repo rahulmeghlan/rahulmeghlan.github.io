@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)http://www.createjs.com/tutorials/Mouse%20Interaction/drag.html -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EaselJS demo: Dragging</title>
+    <link href="./EaselJS demo_ Dragging_files/demo.css" rel="stylesheet" type="text/css">
+    <script src="./EaselJS demo_ Dragging_files/easeljs-0.7.0.min.js"></script>
+    <script>
+        var stage, output;
+
+        function init() {
+            stage = new createjs.Stage("demoCanvas");
+            createjs.Touch.enable(stage);
+
+            // this lets our drag continue to track the mouse even when it leaves the canvas:
+            // play with commenting this out to see the difference.
+            stage.mouseMoveOutside = true;
+
+            var circle = new createjs.Shape();
+            circle.graphics.beginFill("red").drawCircle(0, 0, 50);
+
+            var label = new createjs.Text("drag me", "bold 14px Arial", "#FFFFFF");
+            label.textAlign = "center";
+            label.y = -7;
+
+            var dragger = new createjs.Container();
+            dragger.x = dragger.y = 100;
+            dragger.addChild(circle, label);
+            stage.addChild(dragger);
+
+            dragger.on("pressmove", function (evt) {
+                // currentTarget will be the container that the event listener was added to:
+                evt.currentTarget.x = evt.stageX;
+                evt.currentTarget.y = evt.stageY;
+                // make sure to redraw the stage to show the change:
+                stage.update();
+            });
+
+            stage.update();
+        }
+    </script>
+</head>
+<body onload="init();">
+<canvas id="demoCanvas" style="width: 100%" height="800">
+    alternate content
+</canvas>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transactions Result Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+<div class="container">
+    <h1>Transactions Result Page</h1>
+    <hr />
+    <div class="row select-boxes">
+        <div class="col-md-6">
+            <label for="payment-status">Payment Status</label>
+            <select id="payment-status" name="payment-status" class="form-control"></select>
+        </div>
+
+        <div class="col-md-6">
+            <label for="pagination-pages">Items Per Page</label>
+            <select id="pagination-pages" name="pagination-pages" class="form-control"></select></div>
+    </div>
+    <div class="row">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th id="payment-id">PaymentID</th>
+                <th id="date">Order Date</th>
+                <th>Merchant ID</th>
+                <th>Customer Email</th>
+                <th id="amount">Amount</th>
+                <th>Payment Status</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <input type="button" class="form-control" id="prev" value="Prev"/>
+    <input type="button" class="form-control" id="next" value="Next"/>
+
+</div>
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+  /**
+   * Created with JetBrains WebStorm.
+   * User: rmeghl
+   * Date: 1/6/15
+   * Time: 7:41 PM
+   * To change this template use File | Settings | File Templates.
+   */
+
+  .transition(@config: all .3s) {
+    transition: @config;
+    -webkit-transition: @config;
+  }
+
+  .transition-delay(@time: 0.4s) {
+    transition-delay: @time;
+  }
+
+  .transform-scale(@scale: 1.35) {
+    transform: scale(@scale);
+    -webkit-transform: scale(@scale);
+  }
+
+  .transform-translate3D(@x, @y, @z) {
+    transform: translate3d(@x, @y, @z);
+  }

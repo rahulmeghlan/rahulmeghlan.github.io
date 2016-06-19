@@ -1,0 +1,26 @@
+@import "import.less";
+
+.social-connections {
+  background: @color-yellow;
+  .global-padding();
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin: 0;
+  .title {
+    color: @color-white;
+    font-weight: bold;
+    font-size: 22px;
+  }
+  .username {
+    color: @color-black;
+    font-size: 14px;
+  }
+  .social-connection-item {
+    padding-left: 130px;
+    text-align: left;
+    &.phone {
+      border-left: 1px solid @color-black;
+      padding-left: 30px;
+    }
+  }
+}

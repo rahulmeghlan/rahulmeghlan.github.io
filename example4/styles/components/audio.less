@@ -1,0 +1,28 @@
+@import "../import.less";
+
+.circle_control_side {
+  .transition-delay();
+  .transition();
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  cursor: pointer;
+  z-index: 1000;
+  .inner {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    .circle_control_play {
+      position: absolute;
+      display: block;
+      opacity: 0.5;
+      height: 16px;
+      width: 16px;
+      padding: 42px;
+      * {
+        fill: none;
+        stroke: @color-white;
+      }
+    }
+  }
+}

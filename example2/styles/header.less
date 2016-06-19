@@ -1,0 +1,45 @@
+  /*
+  This file contains the styling for header
+  */
+
+  @import "import.less";
+
+  .main-nav {
+    min-height: 80px;
+    background-color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    .global-padding();
+    div, .nav-row{
+      .min-height();
+    }
+    .nav-row{
+      margin-bottom: 0;
+      float: right;
+    }
+    .nav-item{
+      .min-height();
+      list-style: none;
+      color: @color-white;
+      text-transform: uppercase;
+      margin-right: 5px;
+      padding: 25px 10px;
+      float: left;
+      &:hover, &.active{
+        cursor: pointer;
+        color: @color-white;
+       .min-height();
+        border-bottom: 5px solid @color-yellow;
+        background: @color-grey;
+        a{
+          color: @color-white;
+          text-decoration: none;
+        }
+      }
+      a{
+        color: @color-white;
+        display: block;
+      }
+    }
+  }

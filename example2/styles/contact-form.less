@@ -1,0 +1,29 @@
+@import "import.less";
+
+.contact-form {
+  .stage-content();
+  .form {
+    margin: 0;
+    input, textarea {
+      background: @color-grey;
+      border: 1px solid @color-white;
+      padding: 5px 15px;
+      width: 100%;
+    }
+    input {
+      margin-bottom: 20px;
+    }
+    textarea {
+      height: 135px;
+    }
+    .submit {
+      background: @color-white;
+      color: @color-black;
+      border-bottom: 5px solid @color-yellow;
+      position: absolute;
+      bottom: -40px;
+      right: 5%;
+      width: 100px;
+    }
+  }
+}
