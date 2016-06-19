@@ -37,7 +37,7 @@ var MedicalSystemRecords = (function () {
             if (i === totalRecords - 1) {
                 var $element = document.getElementsByClassName("loading-page")[0];
                 $element.style.height = 0;
-//                $element.innerText = "Done.";
+                $element.innerText = "Done.";
                 var timeout = setTimeout(function () {
                     $element.style.display = "none";
                     clearTimeout(timeout);
