@@ -14,10 +14,12 @@
     min-height: 1000px;
 }
 
-.container{
-    margin-top: 30px;
+.input-group {
+    margin-bottom: 30px;
 }
 
-.input-group{
-    margin-bottom: 30px;
+@media (min-width: 992px) {
+    .container {
+        margin-top: 30px;
+    }
 }
