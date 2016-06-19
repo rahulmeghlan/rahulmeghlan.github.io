@@ -106,7 +106,7 @@ var UserInterface = (function (lib, totalRecords) {
      * */
     function searchInRecords(ssn, index1, index2) {
         setProgressBar(100 - (index2 - index1), "visible");
-        if (isProblem2 && !lib.get(index1).corrupted && !lib.get(index2).corrupted || !isProblem2) {
+        if ((isProblem2 && (!lib.get(index1).corrupted || !lib.get(index2).corrupted)) || !isProblem2) {
             if (index1 !== index2) {
                 if (lib.contain(ssn, index1, index2)) {
                     searchInRecords(ssn, index1, Math.floor((index1 + index2) / 2))
