@@ -13,20 +13,26 @@
 
 
 /**
- * @name: MedicalSystemRecords
+ * @namespace: MedicalSystemRecords
  * @description : Function returns total medical records passed either from
  * */
 var MedicalSystemRecords = (function () {
     var totalRecords = 100000;
 
-    // Create a Dummy Data Set which is sorted based on ssn
+    /**
+     * @name: createDataSet
+     * @returns {Array} Total Medical Records Created for test
+     * */
     function createDataSet() {
         var dataSet = [
             {ssn: 123456789, name: "rahul", medicalCondition: "fit"}
         ];
         // Setting 1 million records in dataSet
         for (var i = 1; i < totalRecords; i++) {
-            dataSet.push({ssn: (dataSet[i - 1].ssn + 1), name: "rahul" + i, medicalCondition: (i % 2 === 0 ? "fit" : "not fit")});
+            dataSet.push({ssn: (dataSet[i - 1].ssn + 1), name: "rahul" + i, medicalCondition: (i % 2 === 0 ? "fit" : "not fit"), corrupted: false});
+            if (i > 90000) {
+                dataSet[i].corrupted = true;
+            }
 
             if (i === totalRecords - 1) {
                 var $element = document.getElementsByClassName("loading-page")[0];
@@ -46,10 +52,10 @@ var MedicalSystemRecords = (function () {
         totalRecords: totalRecords
     };
 })();
-
-/*
- Third Party Library Containing Two Functions contain & get functions
- */
+/**
+ * @namespace : Library
+ * @description : Third Party Library Containing Two Functions contain & get functions
+ * */
 var Library = (function (medicalRecords) {
     // Expose public api of the library
     return {
@@ -66,12 +72,24 @@ var Library = (function (medicalRecords) {
 
 
 /**
- * @name : UserInterface
+ * @namespace : UserInterface
  * @description : This function is used in the UI to get the ssn and return medical records
  * */
 var UserInterface = (function (lib, totalRecords) {
-    function findMedicalRecord(e, ssn) {
+    var isProblem2 = false,
+        index = 0;
+
+    /**
+     * @name: findMedicalRecord
+     * @description: Internal function exposed to UI to get ssn and problem detail
+     * @param {Object} [e] Browser Event Object
+     * @param {Number} [ssn]
+     * @param {String} [problemInfo]
+     * */
+    function findMedicalRecord(e, ssn, problemInfo) {
         e.preventDefault();
+        isProblem2 = typeof problemInfo !== "undefined";
+        index = isProblem2 ? 1 : 0;
         if (ssn < lib.get(0).ssn || ssn > lib.get(totalRecords - 1).ssn) {
             alert("Please enter a valid SSN . \n Starting from " + lib.get(0).ssn + " to " + lib.get(totalRecords - 1).ssn);
         } else {
@@ -82,36 +100,60 @@ var UserInterface = (function (lib, totalRecords) {
     /**
      * @name: searchInRecords
      * @description: This is the internal function which recursively searches for medical records using Binary Search Algo
-     * @params: ssn, index1, index2
+     * @params: {Number} [ssn]
+     * @params: {Number} [index1]
+     * @params: {Number} [index2]
      * */
     function searchInRecords(ssn, index1, index2) {
         setProgressBar(100 - (index2 - index1), "visible");
-
-        if (index1 !== index2) {
-            if (lib.contain(ssn, index1, index2)) {
-                searchInRecords(ssn, index1, Math.floor((index1 + index2) / 2))
+        if (isProblem2 && !lib.get(index1).corrupted && !lib.get(index2).corrupted || !isProblem2) {
+            if (index1 !== index2) {
+                if (lib.contain(ssn, index1, index2)) {
+                    searchInRecords(ssn, index1, Math.floor((index1 + index2) / 2))
+                } else {
+                    searchInRecords(ssn, index2 + 1, totalRecords - 1);
+                }
+            } else if (lib.contain(ssn, index1, index2)) {
+                displayResult(lib.get(index1));
             } else {
-                searchInRecords(ssn, index2 + 1, totalRecords - 1);
+                searchInRecords(ssn, index1 + 1, index2 + 1); // this is done, because we are doing Math.floor for index2
             }
-        } else if (lib.contain(ssn, index1, index2)) {
-            displayResult(lib.get(index1));
         } else {
-            searchInRecords(ssn, index1 + 1, index2 + 1); // this is done, because we are doing Math.floor for index2
+            alert("Sorry, Your Medical Record is corrupted.");
+            resetMedicalRecordList();
         }
     }
 
+    /**
+     * @name: setProgressBar
+     * @params: {Number} [searchPercentage]
+     * */
     function setProgressBar(searchPercentage, state) {
-        var $progressBar = document.getElementsByClassName("progress-bar")[0];
-        document.getElementById("search-bar").style.visibility = state;
+        var $progressBar = document.getElementsByClassName("progress-bar")[index];
+        document.getElementsByClassName("search-bar")[index].style.visibility = state;
         $progressBar.style.width = searchPercentage + "%";
         $progressBar.innerHTML = searchPercentage + "%";
     }
 
+    /**
+     * @name: displayResult
+     * @params: {Object} [obj] Takes the result obj to be displayed in table
+     * */
     function displayResult(obj) {
-        document.getElementsByClassName("result-table")[0].style.visibility = "visible";
-        document.getElementsByClassName("res-ssn")[0].innerText = obj.ssn;
-        document.getElementsByClassName("res-name")[0].innerText = obj.name;
-        document.getElementsByClassName("res-mc")[0].innerText = obj.medicalCondition;
+        document.getElementsByClassName("result-table")[index].style.visibility = "visible";
+        document.getElementsByClassName("res-ssn")[index].innerText = obj.ssn;
+        document.getElementsByClassName("res-name")[index].innerText = obj.name;
+        document.getElementsByClassName("res-mc")[index].innerText = obj.medicalCondition;
+    }
+
+    /**
+     * @name: resetMedicalRecordList
+     * @description: Resets the result table
+     * */
+    function resetMedicalRecordList() {
+        document.getElementsByClassName("res-ssn")[index].innerText = "";
+        document.getElementsByClassName("res-name")[index].innerText = "";
+        document.getElementsByClassName("res-mc")[index].innerText = "";
     }
 
 
