@@ -10,7 +10,7 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="panel panel-default">
+        <div class="panel panel-success">
             <div class="panel-heading">
                 <h3 class="panel-title">Medical Record System | Problem 1</h3>
             </div>
@@ -23,8 +23,6 @@
                         <span class="input-group-btn"><input type="submit" class="btn btn-default"
                                                              value="Get Medical Record"/></span>
                     </form>
-                </div>
-                <div class="col-md-8">
                     <p class="search-bar" style="visibility: hidden;">Searching Medical Records</p>
 
                     <div class="progress">
@@ -33,33 +31,51 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6 alert alert-danger">
 
-                <div class="col-md-6 table-responsive result-table">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>SSN</th>
-                            <th>NAME</th>
-                            <th>Medical Condition</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td class="res-ssn"></td>
-                            <td class="res-name"></td>
-                            <td class="res-mc"></td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <b>Problem Statement : </b><br/>
+
+                    <p>You are querying a 3rd party medical record system, they provide you two functions:</p>
+                    <ul>
+                        <li>1. contain( SSN, index1, index2), it will return true/ false for whether or not it has the
+                            medical record of person with that SSN which sits in between the two index.
+                        </li>
+                        <li>2. get( index ), this will return the medical record at that index.</li>
+                    </ul>
+                    <p>
+                        The system is a collection of medical records that you can only access it through index,
+                        but the problem is that the only information you have from the patient is ssn.
+                        So you have to find out what is the index of the medical record of person with that SSN.
+                        how the 3rd party system implement the contain function is not your concern,
+                        it maybe fast or slow, regardless, you need to minimize the times you call this function.
+                    </p>
+
                 </div>
+
             </div>
+            <table class="table result-table">
+                <thead>
+                <tr>
+                    <th>SSN</th>
+                    <th>NAME</th>
+                    <th>Medical Condition</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="res-ssn"></td>
+                    <td class="res-name"></td>
+                    <td class="res-mc"></td>
+                </tr>
+                </tbody>
+            </table>
         </div>
 
     </div>
 </div>
 <div class="container">
     <div class="row">
-        <div class="panel panel-default">
+        <div class="panel panel-warning">
             <div class="panel-heading">
                 <h3 class="panel-title">Medical Record System | Problem 2</h3>
             </div>
@@ -72,43 +88,45 @@
                         <span class="input-group-btn"><input type="submit" class="btn btn-default"
                                                              value="Get Medical Record"/></span>
                     </form>
-                </div>
-                <div class="col-md-6 alert alert-danger">
-                    <p class="bg-danger">
-                        <b>NOTE : </b><br />
-                        Some Records are corrupted and cannot be accessed. <br />
-                        Any record accessed after N will not be accessible.
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <p class="search-bar" style="visibility: hidden;">Searching Medical Records</p>
+                    <p class="search-bar hide">Searching Medical Records</p>
 
-                    <div class="progress">
+                    <div class="progress hide">
                         <div class="progress-bar" role="progressbar">
                             0%
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6 alert alert-danger">
+                    <b>Problem Statement : </b><br/>
 
-                <div class="col-md-6 table-responsive result-table">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>SSN</th>
-                            <th>NAME</th>
-                            <th>Medical Condition</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td class="res-ssn"></td>
-                            <td class="res-name"></td>
-                            <td class="res-mc"></td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <p>
+                        Let's say a part of the system is accidentally ruined. all the records after index N is not
+                        accessible, and whoever refer to any index after N will not return until the system times out.
+                        to compensate the inconvenience, the system provider give you another authorization key. so in
+                        case you accidentally access some index after index N, you can still have one more shot of
+                        finding your medical record. so how would you find the medical record of SSN efficiently now?
+                        You don't know what N is.
+                    </p>
                 </div>
+
+
             </div>
+            <table class="table result-table">
+                <thead>
+                <tr>
+                    <th>SSN</th>
+                    <th>NAME</th>
+                    <th>Medical Condition</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="res-ssn"></td>
+                    <td class="res-name"></td>
+                    <td class="res-mc"></td>
+                </tr>
+                </tbody>
+            </table>
         </div>
 
     </div>

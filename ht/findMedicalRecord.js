@@ -1,5 +1,5 @@
 /*
- Problem Statement :
+ Problem Statement (1):
  You are querying a 3rd party medical record system, they provide you two functions:
  1. contain( SSN, index1, index2), it will return true/ false for whether or not it has the medical record of person with that SSN which sits in between the two index.
  2. get( index ), this will return the medical record at that index.
