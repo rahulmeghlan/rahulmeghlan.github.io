@@ -1,0 +1,46 @@
+<header class="input-group col-md-push-10">
+  <div class="btn-cont">
+    <input type="text" ng-model="employees.searchKey" ng-keyup="employees.searchEmployee($event)"
+           placeholder="Search"/>
+    <span ng-click="employees.toggleFilter()" class="filter glyphicon glyphicon-filter"></span>
+  </div>
+</header>
+<div class="filter-cont" ng-if="employees.showFilter">
+  <span class="glyphicon glyphicon-triangle-top"></span>
+  <!-- Filter -->
+  <span ng-repeat="filter in employees.filters">
+            <input type="checkbox" name="{{filter}}" ng-value="filter"
+                   ng-click="employees.toggleSubFilter(filter, $event)"/>
+                <label for="{{filter}}">{{filter}}</label>
+
+            </span>
+
+  <!-- Sub Filter -->
+  <div class="sub-filter" ng-if="employees.showSubFilter">
+            <span ng-repeat="(key,val) in employees.filterVals">
+            <input type="checkbox" name="{{key}}" ng-value="key" ng-checked="employees[key]"
+                   ng-click="employees.selectedFilterVals(key, $event)"/>
+                          <label for="{{key}}">{{key}}</label>
+            </span>
+  </div>
+
+</div>
+<div class="tables-cont row">
+  <div class="table-cont col-md-4" ng-repeat="table in employees.tableCount track by $index">
+    <div class="employee"
+         ng-class="{active: chair.active, up: $index <= 1, down: $index > 1, left: ($index%2 === 0), right: ($index%2 !== 0)}"
+         ng-repeat="chair in employees.tableData[$index] track by $index" ng-mouseover="employees.showDetails(chair)"
+         ng-mouseleave="employees.hideDetails(chair)">
+      <div class="employee-detail" ng-if="chair.detailVisible">
+        <img ng-src="{{chair.image}}"/>
+        <p class="name" ng-bind="chair.name"></p>
+        <p ng-bind="chair.role | addSpace"></p>
+        <label>Team</label>
+        <p ng-bind="chair.team | addSpace"></p>
+        <label>Current Project</label>
+        <p ng-bind="chair.project | addSpace"></p>
+      </div>
+    </div>
+    Table {{$index+1}}
+  </div>
+</div>
